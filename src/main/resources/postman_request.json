@@ -1,0 +1,347 @@
+{
+	"info": {
+		"_postman_id": "a96eaa6a-3bd9-417a-8930-cefe2a7a7d12",
+		"name": "CompanyProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Employee-ById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/Employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employees-All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/Employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Departments-ById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/Departments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Departments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Departments-All",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/Departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "EmployeesOfDepartment-ById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/Departments/1/Employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Departments",
+						"1",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DepartmentOfEmployee-ById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/Employees/2/Department",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Employees",
+						"2",
+						"Department"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee-Add-With-newDept",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n  \r\n    \"employeeName\": \"jayshree\",\r\n   \r\n    \"address\": {\r\n        \"zipCode\": 414041,\r\n        \"street\": \"Hinjewadi\",\r\n        \"city\": \"Pune\",\r\n        \"state\": \"Maharashtra\"\r\n    }\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/Employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee-Add-With-existDept",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "[{\r\n  \r\n    \"employeeName\": \"jayshree\",\r\n    \"department\": {\r\n        \"deptId\": 1\r\n    },\r\n    \"address\": {\r\n  \r\n        \"zipCode\": 414041,\r\n        \"street\": \"Hinjewadi\",\r\n        \"city\": \"Pune\",\r\n        \"state\": \"Maharashtra\"\r\n    }\r\n}\r\n]",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/Employees",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Employees"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department-Add-With-NoEmployee",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n \r\n         \"deptName\": \"HR\",\r\n        \"deptHead\": \"abc_Hrhead\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/Departments",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Departments"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee-ById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \r\n    \"employeeName\": \"jayshree\",\r\n    \"department\": {\r\n        \"deptName\": \"Tech\",\r\n        \"deptHead\": \"abc_Techhead\"\r\n    },\r\n    \"address\": {\r\n        \"zipCode\": 414041,\r\n        \"street\": \"Hinjewadi\",\r\n        \"city\": \"Pune\",\r\n        \"state\": \"Maharashtra\"\r\n    }\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/Employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Employee-ById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/Employees/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Employees",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Department-ById",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8085/v1/Departments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Departments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Departent-ById",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n\t\t \"deptId\": 1,\r\n         \"deptName\": \"HR\",\r\n        \"deptHead\": \"abc_Hrhead_updated\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8085/v1/Departments/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8085",
+					"path": [
+						"v1",
+						"Departments",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "1dc2bce8-7e28-4b64-9202-ee8be86fd494",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "7e25ca1f-78ba-4b56-97d3-bf4f91e75818",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
