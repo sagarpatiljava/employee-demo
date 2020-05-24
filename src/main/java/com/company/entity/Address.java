@@ -11,12 +11,14 @@ import javax.persistence.Id;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 
 @Entity
 @Table(name = "address")
 @JsonInclude(Include.NON_NULL)
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"}) 
 public class Address implements Serializable{
 
 	/**

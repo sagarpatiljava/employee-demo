@@ -1,0 +1,9 @@
+management:
+ security:
+  enabled : 
+  
+  spring:
+    resources:
+     chain:
+      enabled : true
+    
